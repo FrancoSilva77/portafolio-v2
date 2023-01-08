@@ -1,0 +1,103 @@
+---
+---
+
+<header class="header">
+  <div class="header__contenido contenedor">
+    <h1 class="header__logo">Franco Silva</h1>
+
+    <div class="menu-mobile">
+      <i class="ph-list"></i>
+    </div>
+
+    <nav class="navegacion">
+      <a class="navegacion__link" href="#sobre-mi">Sobre Mi</a>
+      <a class="navegacion__link" href="#habilidades">Habilidades</a>
+      <a class="navegacion__link" href="#proyectos">Proyectos</a>
+      <a class="navegacion__link" href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    background-color: var(--principal);
+    padding: 1rem;
+  }
+
+  .header__logo {
+    margin: 0;
+    color: var(--blanco);
+  }
+
+  .header__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .header__contenido {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .menu-mobile {
+      display: none;
+    }
+  }
+
+  .ph-list {
+    text-align: center;
+    font-size: 4rem;
+    margin: 1rem 0;
+    color: var(--blanco);
+  }
+
+  .ph-list:hover {
+    cursor: pointer;
+  }
+
+  .navegacion {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility 0.3s ease-in-out, opacity 0.5s linear,
+      height 0.5s linear;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .navegacion {
+      flex-direction: row;
+      gap: 0 1.5rem;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .navegacion__link {
+    margin: 0;
+    color: var(--blanco);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .navegacion__link:hover {
+    background-color: var(--blanco);
+    color: var(--principal);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .mostrar {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+  }
+</style>
