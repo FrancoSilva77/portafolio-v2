@@ -1,0 +1,82 @@
+---
+import foto from "../../public/img/foto.jpeg";
+import foto_webp from "../../public/img/foto.webp";
+---
+
+<main class="sobre-mi contenedor" id="sobre-mi">
+  <picture>
+    <source srcset={foto_webp} type="image/webp" />
+    <img
+      data-aos="zoom-in-up"
+      data-aos-duration="1500"
+      class="sobre-mi__foto"
+      loading="lazy"
+      src={foto}
+      width="500"
+      height="300"
+      alt="Foto de Franco Silva"
+    />
+  </picture>
+
+  <div class="sobre-mi__contenido">
+    <h2 class="sobre-mi__heading">Sobre Mi</h2>
+    <p class="sobre-mi__texto">
+      Hola, mi nombre es Franco Silva y soy desarrollador web, hago páginas web
+      con las tecnologías más modernas para negocios, esto les puede beneficiar a que más
+      gente conozca la existencia de su negocio. Me gusta resolver problemas aplicando
+      ingeniería de software.
+    </p>
+    <p class="sobre-mi__texto">
+      Estudio ingeniería en sistemas computacionales y actualmente estoy
+      cursando el 7mo semestre. Me gusta mucho leer y aprender nuevas
+      tecnologías.
+    </p>
+  </div>
+</main>
+
+<style>
+  .sobre-mi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5rem;
+    gap: 5rem;
+  }
+
+  @media (min-width: 768px) {
+    .sobre-mi {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .sobre-mi__foto {
+    flex: 3;
+    width: 30rem;
+    height: 30rem;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .sobre-mi__foto {
+      width: 40rem;
+      height: 40rem;
+    }
+  }
+
+  .sobre-mi__contenido {
+    flex: 1;
+  }
+
+  .sobre-mi__heading {
+    margin: 0;
+  }
+
+  .sobre-mi__texto {
+    padding: 2rem;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1.8rem;
+  }
+</style>
