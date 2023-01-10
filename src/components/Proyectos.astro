@@ -1,0 +1,83 @@
+---
+import Proyecto from "./Proyecto.astro";
+
+import proyecto_1Png from "/img/proyecto_1.png";
+import proyecto_1Webp from "/img/proyecto_1.webp";
+import proyecto_2Png from "/img/proyecto_2.png";
+import proyecto_2Webp from "/img/proyecto_2.webp";
+import proyecto_3Png from "/img/proyecto_3.png";
+import proyecto_3Webp from "/img/proyecto_3.webp";
+import proyecto_4Png from "/img/proyecto_4.png";
+import proyecto_4Webp from "/img/proyecto_4.webp";
+import proyecto_5Png from "/img/proyecto_5.png";
+import proyecto_5Webp from "/img/proyecto_5.webp";
+---
+
+<section class="proyectos contenedor" id="proyectos">
+  <h2 class="proyectos__heading">Proyectos</h2>
+
+  <div class="proyectos__grid">
+    <Proyecto
+      titulo="Blog de Café"
+      imagenWebp={proyecto_1Webp}
+      imagen={proyecto_1Png}
+      url="https://blog-cafe-fs.netlify.app/"
+    />
+
+    <Proyecto
+      titulo="Bienes Raíces"
+      imagenWebp={proyecto_2Webp}
+      imagen={proyecto_2Png}
+      url="https://agencia-viajes-production.up.railway.app/"
+    />
+
+    <Proyecto
+      titulo="Festival Música"
+      imagenWebp={proyecto_3Webp}
+      imagen={proyecto_3Png}
+      url="https://festival-musica-fs.netlify.app/"
+    />
+
+    <Proyecto
+      titulo="Guitar-LA"
+      imagenWebp={proyecto_4Webp}
+      imagen={proyecto_4Png}
+      url="https://guitarra-la-fs.netlify.app/"
+    />
+
+    <Proyecto
+      titulo="Carolina Spa"
+      imagenWebp={proyecto_5Webp}
+      imagen={proyecto_5Png}
+      url="https://carolina-spa-fs.netlify.app/"
+    />
+  </div>
+</section>
+
+<style>
+  .proyectos {
+    margin-top: 5rem;
+  }
+
+  .proyectos__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    .proyectos__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .proyectos__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include m.desktop {
+    @include m.grid(3, 2rem);
+  }
+</style>

@@ -1,0 +1,97 @@
+---
+export interface Props {
+  imagen: string;
+  imagenWebp: string;
+  url: string;
+  titulo: string;
+}
+
+const { imagen, imagenWebp, url, titulo } = Astro.props;
+---
+
+<div class="proyecto" data-aos="fade-down-right">
+  <picture>
+    <source srcset={imagenWebp} type="image/webp" />
+    <img
+      class="proyecto__imagen"
+      loading="lazy"
+      src={imagen}
+      width="500"
+      height="300"
+      alt={`Imagen del proyecto ${titulo}`}
+    />
+  </picture>
+  <h3 class="proyecto__heading">{titulo}</h3>
+  <div class="proyecto__tecnologias">
+    <p class="proyecto__tecnologia">HTML</p>
+    <p class="proyecto__tecnologia">CSS</p>
+    <p class="proyecto__tecnologia">Javascript</p>
+    <p class="proyecto__tecnologia">SASS</p>
+  </div>
+  <a target="_blank" href={url} class="proyecto__enlace">Ver proyecto</a>
+</div>
+
+<style>
+  .proyecto {
+    border: 1px solid var(--principal);
+    padding: 2rem;
+    border-radius: 0.8rem;
+  }
+
+  .proyecto__imagen {
+    height: 23rem;
+  }
+
+  .proyecto__heading {
+    margin: 2rem 0 0 0;
+  }
+
+  .proyecto__tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .proyecto__tecnologia {
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: var(--principal);
+    color: var(--blanco);
+    padding: 0.7rem;
+    font-weight: 700;
+    border: 1px solid var(--principal);
+    border-radius: 0.5rem;
+    margin: .5rem 0;
+  }
+
+  .proyecto__enlace {
+    display: block;
+    text-decoration: none;
+    background-color: var(--principal);
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--blanco);
+    margin: 1rem 0;
+    border: 1px solid var(--principal);
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    font-weight: 700;
+  }
+
+  .proyecto__enlace:hover {
+    background-color: var(--blanco);
+    color: var(--principal);
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .proyecto__enlace {
+      width: auto;
+    }
+  }
+</style>
