@@ -1,0 +1,51 @@
+<section class="contacto" id="contacto">
+  <h2 class="contacto__heading">Contacto</h2>
+
+  <div class="contacto__formas">
+    <p class="contacto__forma">
+      <i class="ph-phone" style="color: blue"></i> Teléfono:
+      <span class="contacto__direccion"> 249-171-92-36</span>
+    </p>
+    <p class="contacto__forma">
+      <i class="ph-whatsapp-logo" style="color: green"></i> WhatsApp:
+      <span class="contacto__direccion"> 249-171-92-36</span>
+    </p>
+    <p class="contacto__forma">
+      <i class="ph-envelope" style="color: red"></i> Correo:
+      <span class="contacto__direccion"> franco_tigres18@hotmail.com</span>
+    </p>
+  </div>
+</section>
+
+<style>
+  .contacto {
+    margin-top: 5rem;
+  }
+  .contacto__heading {
+    margin-bottom: 2rem;
+  }
+
+  .contacto__formas {
+    display: grid;
+    place-content: center;
+  }
+
+  .contacto__forma {
+    font-size: 2.5rem;
+    color: #585656;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .contacto__forma {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+  .contacto__direccion {
+    color: var(--principal);
+    font-weight: 700;
+  }
+</style>
