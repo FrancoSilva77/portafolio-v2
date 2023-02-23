@@ -23,10 +23,10 @@ const { imagen, imagenWebp, url, titulo } = Astro.props;
   </picture>
   <h3 class="proyecto__heading">{titulo}</h3>
   <div class="proyecto__tecnologias">
-    <p class="proyecto__tecnologia">HTML</p>
+    <!-- <p class="proyecto__tecnologia">HTML</p>
     <p class="proyecto__tecnologia">CSS</p>
     <p class="proyecto__tecnologia">Javascript</p>
-    <p class="proyecto__tecnologia">SASS</p>
+    <p class="proyecto__tecnologia">SASS</p> -->
   </div>
   <a target="_blank" href={url} class="proyecto__enlace">Ver proyecto</a>
 </div>
@@ -35,7 +35,7 @@ const { imagen, imagenWebp, url, titulo } = Astro.props;
   .proyecto {
     border: 1px solid var(--principal);
     padding: 2rem;
-    border-radius: 0.8rem;
+    border-radius: 0.5rem;
   }
 
   .proyecto__imagen {

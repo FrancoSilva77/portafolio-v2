@@ -1,10 +1,11 @@
 ---
 import foto from "/img/foto.jpeg";
 import foto_webp from "/img/foto.webp";
+import foto_code from "/img/foto-coding.png";
 ---
 
 <main class="sobre-mi contenedor" id="sobre-mi">
-  <picture>
+  <!-- <picture>
     <source srcset={foto_webp} type="image/webp" />
     <img
       data-aos="zoom-in-up"
@@ -16,21 +17,22 @@ import foto_webp from "/img/foto.webp";
       height="300"
       alt="Foto de Franco Silva"
     />
-  </picture>
+  </picture> -->
+  <img src={foto_code} alt="Fotografía representativa" class="sobre-mi__foto" />
 
   <div class="sobre-mi__contenido">
     <h2 class="sobre-mi__heading">Sobre Mi</h2>
     <p class="sobre-mi__texto">
       Hola, mi nombre es Franco Silva y soy desarrollador web, hago páginas web
-      con las tecnologías más modernas para negocios, esto les puede beneficiar a que más
-      gente conozca la existencia de su negocio. Me gusta resolver problemas aplicando
-      ingeniería de software.
+      con las tecnologías más modernas para negocios, esto les puede beneficiar
+      mucho haciendo que la gente conozca la existencia de su negocio. Me gusta
+      resolver problemas aplicando ingeniería de software.
     </p>
-    <p class="sobre-mi__texto">
+    <!-- <p class="sobre-mi__texto">
       Estudio ingeniería en sistemas computacionales y actualmente estoy
-      cursando el 7mo semestre. Me gusta mucho leer y aprender nuevas
+      cursando el 8mo semestre. Me gusta mucho leer y aprender nuevas
       tecnologías.
-    </p>
+    </p> -->
   </div>
 </main>
 
@@ -60,13 +62,14 @@ import foto_webp from "/img/foto.webp";
 
   @media (min-width: 768px) {
     .sobre-mi__foto {
-      width: 40rem;
-      height: 40rem;
+      flex: 1;
+      width: 35rem;
+      height: 35rem;
     }
   }
 
   .sobre-mi__contenido {
-    flex: 1;
+    flex: 2;
   }
 
   .sobre-mi__heading {
